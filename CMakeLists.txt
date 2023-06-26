@@ -30,6 +30,8 @@ if((${CUDA_VERSION_MAJOR} VERSION_GREATER_EQUAL "11" AND ${CUDA_VERSION_MINOR} V
 endif()
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
+set(CUDNN_INCLUDE_PATH /usr/local/cuda/include)
+set(CUDNN_LIBRARY_PATH /usr/local/cuda/lib64)
 find_package(CUDNN)
 
 option(BUILD_CUTLASS_MOE "Builds CUTLASS kernels supporting MoE GEMM" ON)
